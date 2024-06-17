@@ -1,3 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Establece la familia de fuentes que prefieras */
+}
+
+nav {
+  background-color: #fff5e7;
+  padding: 30px 80px; /* Más padding arriba y abajo, menos a los lados */
+}
+
 .nav-wrapper {
-  background-color: #2196f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  color: #54797f;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.brand-logo img {
+  height: 50px; /* Ajusta este valor según el tamaño deseado del icono */
+  margin-right: 10px;
+}
+
+#nav-mobile {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-mobile li {
+  margin-left: 20px;
+}
+
+#nav-mobile a {
+  text-decoration: none;
+  color: #54797f;
+  font-size: large;
+  position: relative; /* Añadido para subrayado animado */
+  transition: border-bottom-color 0.3s ease; /* Transición para animar el color del borde inferior */
+}
+
+#nav-mobile a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Controla la distancia del subrayado desde el texto */
+  width: 100%;
+  border-bottom: 2px solid transparent; /* Inicialmente transparente */
+  transition: border-bottom-color 0.3s ease; /* Transición para animar el color del borde inferior */
+}
+
+#nav-mobile a:hover::after,
+#nav-mobile a.active::after {
+  border-bottom-color: #54797f; /* Color del subrayado al hacer hover y enlace activo */
+}
+
+#nav-mobile a:active::after {
+  border-bottom-color: #54797f; /* Color del subrayado en el enlace activo */
 }
